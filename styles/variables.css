@@ -3,5 +3,9 @@
   --accent-color: #ff0070;
   --main-font: 'IBM Plex mono';
   --main-font-color: #f1b2cE;
-  --text-font-size: 18px;
+  --main-font-size: 18px;
+  --header-cover: url(../images/cover-image-dark.png);
+  --header-padding: min(2.67vi, 20px);
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
 }
