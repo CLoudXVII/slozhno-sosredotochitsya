@@ -1,9 +1,9 @@
 :root {
   /* colors */
   --main-color: #000028;
-  --accent-color: #ff0070;
   --main-font-color: #f1b2cE;
   --main-title-color: #db00ff;
+  --accent-color: #ff0070;
   --hover-color: rgba(255, 0, 112, 0.4);
 
   /* fonts */
@@ -12,6 +12,7 @@
   --main-font-weight: 400;
   --accent-font-weight: 700;
 
+  /* Other */
   --header-cover: url(../images/cover-image-dark.png);
   --container-padding: min(2.67vi, 20px);
 }
