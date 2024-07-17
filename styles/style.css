@@ -87,9 +87,9 @@
   font-size: var(--main-font-size, 18px);
   font-style: normal;
   line-height: var(--main-font-size, 18px);
+  text-underline-offset: 5px;
   text-transform: lowercase;
   background-color: transparent;
-  text-underline-offset: 5px;
 }
 
 .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
@@ -180,8 +180,8 @@
 
 .link {
   display: inline-block;
-  text-decoration: none;
   outline: none;
+  text-decoration: none;
   text-underline-offset: 3px;
   text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
 }
@@ -202,29 +202,29 @@
 }
 
 .image-list__item img {
+  object-fit: cover;
   inline-size: 100%;
   block-size: 100%;
-  object-fit: cover;
 }
 
 .footer {
   position: relative;
-  min-block-size: 100vb;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-block-size: 100vb;
 }
 
 .footer__title {
-  text-align: center;
+  color: var(--main-title-color, #db00ff);
   font-family: var(--main-font, sans-serif);
-  font-style: normal;
   font-weight: var(--accent-font-weight, bold);
   font-size: clamp(7.25rem, 7.011rem + 1.018vw, 7.5rem);
+  font-style: normal;
   line-height: 82.5%;
-  color: var(--main-title-color, #db00ff);
-  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
+  text-align: center;
   text-transform: lowercase;
+  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
 }
 
 @media (width >= 768px) {
