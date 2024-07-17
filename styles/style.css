@@ -1,16 +1,17 @@
 .page {
   font-family: var(--main-font, sans-serif);
   background-color: var(--main-color, #000028);
+  background-image: var(--header-cover, url(../images/cover-image-dark.png));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
   position: relative;
   padding: var(--container-padding, min(2.67vi, 20px));
-  background-image: var(--header-cover, url(../images/cover-image-dark.png));
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-block-size: 668px;
+  min-block-size: 100vb;
 }
 
 .decorated-zone::before {
@@ -37,9 +38,9 @@
   block-size: 25px;
 }
 
-.header__decorative-element {
-  position: relative;
-  padding-inline-end: 29px;
+.header__decorative-element::before {
+  content: "rec";
+  position: absolute;
   color: var(--accent-color, #ff0070);
   font-family: var(--main-font, sans-serif);
   font-weight: var(--main-font-weight, normal);
@@ -48,6 +49,7 @@
   line-height: 25px;
   text-align: right;
   text-transform: uppercase;
+  inset-inline-end: clamp(2.438rem, 1.841rem + 2.545vw, 3.063rem);
 }
 
 .header__decorative-element::after {
@@ -55,16 +57,17 @@
   position: absolute;
   margin-inline-start: 11px;
   margin-block-start: 8px;
-  border-radius: 50%;
+  border-radius: 100%;
   object-position: center;
   box-shadow: 0px 0px 4px 2px #FF0070;
   background-color: var(--accent-color, #ff0070);
+  inset-inline-end: clamp(1.125rem, 0.529rem + 2.545vw, 1.75rem);
   inline-size: 9px;
   block-size: 9px;
 }
 
 .header__theme-menu {
-  margin-block-start: clamp(2.5rem, -3.887rem + 27.251vw, 9.5rem);
+  margin-block-start: clamp(4.063rem, -2.319rem + 27.226vw, 10.75rem);
 }
 
 .header__theme-menu-list {
@@ -86,6 +89,15 @@
   line-height: var(--main-font-size, 18px);
   text-transform: lowercase;
   background-color: transparent;
+  text-underline-offset: 5px;
+}
+
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+  outline: 1px solid var(--hover-color, rgba(255 0 112 0.4));
+}
+
+.header__theme-menu-button:focus-visible {
+  box-shadow: 0 1px 0 0 var(--accent-color, #ff0070);
 }
 
 .header__theme-menu-button_active {
@@ -95,7 +107,7 @@
 .header__title {
   margin-block-start: clamp(4.25rem, -2.131rem + 27.226vw, 10.938rem);
   margin-block-end: clamp(3.438rem, -2.944rem + 27.226vw, 10.125rem);
-  color: #db00ff;
+  color: var(--main-title-color, #db00ff);
   font-family: var(--main-font, sans-serif);
   font-weight: var(--accent-font-weight, bold);
   font-size: clamp(7.25rem, 7.011rem + 1.018vw, 7.5rem);
@@ -155,9 +167,20 @@
 }
 
 .link {
+  display: inline-block;
   text-decoration: none;
+  outline: none;
   text-underline-offset: 3px;
-  text-shadow: 2px 1px 0px var(--accent-color, #ff0070);
+  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
+}
+
+.link:hover {
+  box-shadow: 0 1px 0 0 var(--main-font-color, #f1b2ce);
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--main-font-color, #f1b2ce);
+  outline-offset: -1px;
 }
 
 .card-list__item:not(:last-child) {
@@ -165,8 +188,8 @@
 }
 
 .card-list__title {
-  font-weight: var(--main-font-weight, normal);
   margin-block-end: 10px;
+  font-weight: var(--main-font-weight, normal);
 }
 
 .content-section:last-child {
@@ -183,6 +206,26 @@
   inline-size: 100%;
 }
 
+.footer {
+  position: relative;
+  min-block-size: 100vb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__title {
+  text-align: center;
+  font-family: var(--main-font, sans-serif);
+  font-style: normal;
+  font-weight: var(--accent-font-weight, bold);
+  font-size: clamp(7.25rem, 7.011rem + 1.018vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--main-title-color, #db00ff);
+  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
+  text-transform: lowercase;
+}
+
 @media (width >= 768px) {
   .header__title {
     margin-inline-start: -20px;
@@ -192,11 +235,12 @@
   .header__subtitle {
     max-inline-size: clamp(22.75rem, -1.063rem + 49.609vw, 30.688rem);
   }
+
 }
 
 @media (width >= 1024px) {
   .header__theme-menu {
-    margin-block-start: -25px;
+    margin-block-start: 0;
   }
 
   .header__theme-menu-list {
