@@ -5,7 +5,7 @@
   --main-font-color: #f1b2cE;
   --main-font-size: 18px;
   --header-cover: url(../images/cover-image-dark.png);
-  --header-padding: min(2.67vi, 20px);
+  --container-padding: min(2.67vi, 20px);
   --main-font-weight: 400;
   --accent-font-weight: 700;
 }
