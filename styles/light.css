@@ -1,9 +1,13 @@
 .page.theme_light {
   /* colors */
   --main-color: #FFF1F7;
-  --main-font-color: #353430;
-  --main-title-color: #FFC2E6;
   --accent-color: #FF8DCB;
+  --main-title-color: #FFC2E6;
+  --main-font-color: #353430;
+  --title-color: #353430;
+  --accent-title-color: #353430;
+  --outline-color: #353430;
+  --theme-button-color: #353430;
   --hover-color: rgba(50, 49, 45, 0.4);
 
   /* fonts */
@@ -17,47 +21,21 @@
   --container-padding: min(2.67vi, 20px);
 }
 
-.page.theme_light .decorated-zone::before {
-  border-inline-end: 1px solid var(--main-font-color, #353430);
-  border-block-start: 1px solid var(--main-font-color, #353430);
-}
-
-.page.theme_light .decorated-zone::after {
-  border-inline-start: 1px solid var(--main-font-color, #353430);
-  border-block-end: 1px solid var(--main-font-color, #353430);
-}
-
-.page.theme_light .header__decorative-element:before {
+.page.theme_light .header__decorative-element {
   display: none;
-}
-
-.page.theme_light .header__decorative-element::after {
-  display: none;
-}
-
-.page.theme_light .header__theme-menu-button {
-  color: var(--main-font-color, #353430);
-}
-
-.page.theme_light .header__theme-menu-button:focus-visible {
-  box-shadow: 0 1px 0 0 var(--main-font-color, #353430);
-}
-
-.page.theme_light .header__theme-menu-button_active {
-  outline: 1px solid var(--main-font-color, #353430);
-}
-
-.page.theme_light .title {
-  color: var(--main-font-color, #353430);
 }
 
 @media (prefers-color-scheme: light) {
-  .page {
+  :root {
     /* colors */
     --main-color: #FFF1F7;
-    --main-font-color: #353430;
-    --main-title-color: #FFC2E6;
     --accent-color: #FF8DCB;
+    --main-title-color: #FFC2E6;
+    --main-font-color: #353430;
+    --title-color: #353430;
+    --accent-title-color: #353430;
+    --outline-color: #353430;
+    --theme-button-color: #353430;
     --hover-color: rgba(50, 49, 45, 0.4);
 
     /* fonts */
@@ -71,37 +49,8 @@
     --container-padding: min(2.67vi, 20px);
   }
 
-  .decorated-zone::before {
-    border-inline-end: 1px solid var(--main-font-color, #353430);
-    border-block-start: 1px solid var(--main-font-color, #353430);
-  }
-
-  .decorated-zone::after {
-    border-inline-start: 1px solid var(--main-font-color, #353430);
-    border-block-end: 1px solid var(--main-font-color, #353430);
-  }
-
-  .header__decorative-element:before {
+  .header__decorative-element{
     display: none;
   }
 
-  .header__decorative-element::after {
-    display: none;
-  }
-
-  .header__theme-menu-button {
-    color: var(--main-font-color, #353430);
-  }
-
-  .header__theme-menu-button:focus-visible {
-    box-shadow: 0 1px 0 0 var(--main-font-color, #353430);
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--main-font-color, #353430);
-  }
-
-  .title {
-    color: var(--main-font-color, #353430);
-  }
 }
