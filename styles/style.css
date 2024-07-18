@@ -9,9 +9,9 @@
 }
 
 .header {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
-  position: relative;
   padding: var(--container-padding, min(2.67vi, 20px));
   min-block-size: 668px;
   block-size: 100vb;
@@ -117,6 +117,8 @@
 }
 
 .header__title {
+  justify-self: flex-start;
+  align-self: center;
   color: var(--main-title-color, #db00ff);
   font-family: var(--main-font, monospace);
   font-weight: var(--accent-font-weight, bold);
@@ -125,8 +127,6 @@
   line-height: 82.5%;
   text-transform: lowercase;
   text-shadow: 4px 4px 0px var(--accent-color, #ff0070);
-  align-self: center;
-  justify-self: flex-start;
 }
 
 .title {
@@ -144,11 +144,11 @@
 
 .header__subtitle {
   display: block;
+  justify-self: flex-end;
+  align-self: center;
   margin-inline-start: auto;
   font-style: normal;
   max-inline-size: clamp(22.188rem, 21.651rem + 2.29vw, 22.75rem);
-  align-self: center;
-  justify-self: flex-end;
 }
 
 .main {
