@@ -104,7 +104,7 @@
 }
 
 .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
-  outline: 1px solid var(--theme-button-color, rgba(255 0 112 0.4));
+  outline: 1px solid var(--hover-color, rgba(255 0 112 0.4));
   cursor: pointer;
 }
 
